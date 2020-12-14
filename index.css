@@ -19,4 +19,34 @@ h2 {
 .p {
     padding-left: 20px;
     font-size: 20px;
+    padding-top: 10px;
+}
+
+li {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+#birdImage {
+    height: 200px;
+    width: 300px;
+}
+
+#melImage {
+    height: 250px;
+    width: 250px;
+}
+
+.al {
+    display: flex;
+    flex-direction: row;
+}
+
+.nn {
+    padding-left: 150px;
+}
+
+.res {
+    height: 400px;
+    width: 800px;
 }

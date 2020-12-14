@@ -12,21 +12,174 @@
 <div class="p">
     <h2>Abstract</h2>
     <p>We want to classify sounds of different kinds of birds. We used data from this <a href="https://www.xeno-canto.org/">website</a></p>
+    <p>The original whole dataset is too big so we just used a portion of it. The original dataset has recordings of various kinds of
+    birds from many different countries. We just used 21 classes of bird sounds from 2 countries: Poland and Germany.</p>
+    <p>The problem is that given a sound recording of a bird from those 21 classes, we want to classify which kind of bird it is.</p>
+    <p>Our approach is first converting sound files to images, then training a CNN net to classify those images, and using test
+        dataset to test our model. We finally achieved about 74% test accuracy.</p>
+    <p><a href="https://www.youtube.com">Video</a> goes here! This is a short video presentation of our work.</p>
 </div>
 <div class="p">
-
+    <h2>Introduction</h2>
+    <p>We thought this problem is very interesting because both of us like birds and nature and since there is already
+    gender-classification and person-classification neural networks, we thought we could try to apply similar approach
+    to birds. We think this problem is worth solving because if we have a good algorithm to classify different kinds of
+    birds based on their sounds, it can benefit bird research by helping monitor specific species.</p>
+    <p>We did some research about how to classify species based on sounds, and found that we could convert sounds to images
+     and apply what we have learned in this class to classify them.</p>
 </div>
 <div class="p">
-
+    <h2>Related Work</h2>
+    <p>We have found a few papers about bird sound classification and detection. Here are the links: </p>
+    <ul>
+        <li>Stowell, Dan, et al. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13103">"Automatic acoustic detection of birds through deep learning: the first Bird Audio Detection
+            challenge."</a> Methods in Ecology and Evolution 10.3 (2019): 368-380.</li>
+        <li>Koh, Chih-Yuan, et al. <a href="http://www.dei.unipd.it/~ferro/CLEF-WN-Drafts/CLEF2019/paper_68.pdf">"Bird
+            Sound Classification using Convolutional Neural Networks."</a> (2019).</li>
+        <li>Kahl, S., et al. <a href="http://ceur-ws.org/Vol-2380/paper_256.pdf">"Overview of BirdCLEF 2019: large-scale
+            bird recognition in Soundscapes."</a> CLEF working notes (2019).</li>
+    </ul>
+    <p>We also found an online <a href="http://machine-listening.eecs.qmul.ac.uk/bird-audio-detection-challenge-results/">challenge</a>
+    of bird audio detection and the results. Quite a few teams participating in this challenge got a score of almost 90%,
+     which is a strong score for this difficult challenge.</p>
+    <p>From what we have found online, some people are doing bird sound detection to help monitor systems detect when there
+        are birds existing during a time period; and some other people are doing bird sound classification.</p>
+     <p>For bird sound dectection, we think that the current result is pretty good since most teams can achieve 90% on that
+      challenge. For bird sound classification, we haven't found many papers or challenges about it, and the results
+     discussed in the second paper were not very good. Thus, we thought there is still much space for this problem. </p>
+    <p>Also, in <a href="http://ceur-ws.org/Vol-1609/16090547.pdf">this paper</a>, they talked about challenges in bird
+    sound recognition, some important issues are:
+        <ul>
+            <li>Background noise in the recordings - city noises, churches, cars...</li>
+            <li>Very often multiple birds singing at the same time - multi-label classification problem</li>
+            <li>Differences between mating calls and songs - mating calls are short, whereas songs are longer</li>
+            <li>Inter-species variance - same bird species singing in different countries might sound completely different</li>
+            <li>Variable length of sound recordings</li>
+            <li>Large number of different species</li>
+        </ul>
+    </p>
 </div>
 <div class="p">
-
+    <h2>Approach</h2>
+    <p>We used a portion of data from xeno-canto.org website with 21 classes of birds and recordings from 2 countries,
+        and finally got 2849 mp3 recordings.</p>
+    <p>We downloaded bird sound files from the www.xeno-canto.org archives with metadata. It downloaded all the files
+    found with the search terms (bird kind and country) into subdirectory with corresponding json files. Then, the program
+    found all the files ending with .mp3 in the directory. Then, we preprocessed those recordings by cutting each of them into
+        4-5s pieces (since recordings are of different lengths) and transfer each of those pieces to a melspectrogram.
+        We got 66061 images and we separated them to training and test sets, 80% and 20%, and got 52840 images for training
+        and 13221 images for test.</p>
+    <p>You can select each kind of bird and listen to the corresponding recording and a sample converted melspectrogram.
+    </p>
+    <select name="birds" id="birds" onchange=showImage(this)>
+        <option value="1">Chloris chloris</option>
+        <option value="2">Columba palumbus</option>
+        <option value="3">Sitta europaea</option>
+        <option value="4">Phoenicurus ochruros</option>
+        <option value="5">Turdus merula</option>
+        <option value="6">Passer montanus</option>
+        <option value="7">Phylloscopus trochilus</option>
+        <option value="8">Phylloscopus collybita</option>
+        <option value="9">Phoenicurus phoenicurus</option>
+        <option value="10">Erithacus rubecula</option>
+        <option value="11">Parus major</option>
+        <option value="12">Alauda arvensis</option>
+        <option value="13">Luscinia luscinia</option>
+        <option value="14">Garrulus glandarius</option>
+        <option value="15">Turdus philomelos</option>
+        <option value="16">Troglodytes troglodytes</option>
+        <option value="17">Carduelis carduelis</option>
+        <option value="18">Sturnus vulgaris</option>
+        <option value="19">Emberiza citrinella</option>
+        <option value="20">Passer domesticus</option>
+        <option value="21">Fringilla coelebs</option>
+    </select>
+    <div id="div1">
+        <div class="al">
+            <div ><p>Bird Image: </p><img src="pictures/Chlorischloris.jpg" id="birdImage"></div>
+            <div class="nn"><p>Converted Melspectrogram:</p><img src="spectrogram/Chlorischloris.png" id="melImage"></div>
+        </div>
+        <div style="padding-bottom: 15px">
+            <p>Bird Audio: </p><audio controls src="recordings/Chlorischloris.mp3" type="audio/mpeg" id = "audio">
+            </audio>
+        </div>
+    </div>
+    <script>
+        function showImage(a){
+            var bird = ['Chlorischloris', 'Columbapalumbus', 'Sittaeuropaea', 'Phoenicurusochruros', 'Turdusmerula', 'Passermontanus', 'Phylloscopustrochilus', 'Phylloscopuscollybita', 'Phoenicurusphoenicurus', 'Erithacusrubecula', 'Parusmajor', 'Alaudaarvensis', 'Luscinialuscinia', 'Garrulusglandarius', 'Turdusphilomelos', 'Troglodytestroglodytes', 'Cardueliscarduelis', 'Sturnusvulgaris', 'Emberizacitrinella', 'Passerdomesticus', 'Fringillacoelebs'];
+            var selectedItem = a.value;
+            document.getElementById("birdImage").src = "pictures/" + bird[selectedItem -1] + ".jpg";
+            document.getElementById("audio").src = "recordings/" + bird[selectedItem -1] + ".mp3";
+            document.getElementById("melImage").src = "spectrogram/" + bird[selectedItem -1] + ".png";
+        }
+    </script>
+    <hr>
+    <p>After converting all the recordings to melspectrograms, we can apply what we have learned about image classification
+     in this class.</p>
+    <p>We used a similar CNN net to CifarNet in hw1, but a little shallower. We used three convolutional layers, and after
+    each convolutional layer, we added a batch norm layer and a RELU activation layer. We also added a MaxPool layer after
+    the first convolutional layer. Finally we added three fully connected layers. We used a batch size = 128, epoch = 20,
+    learning rate = 0.001, momentum = 0.95, and weight decay = 0.0005.</p>
+    <p>The network architecture is shown as the image below: </p>
+    <img src="net.png" id="netImage" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
+    <p>The data download and preprocessing parts are from preexisting work, from <a href="https://github.com/wimlds-trojmiasto/birds">this github</a>
+    , and connecting to google drive, saving data and models to google drive, fetching pre-results from google drive,
+    defining the neural network, training and testing using corresponding data and final plotting were implemented for
+    the project, some of them were from homework notebooks.</p>
+    <p>The colab notebook is linked <a href="https://colab.research.google.com/drive/1RZryS8VTK_H0JkAzoIGzj0Dp_T5KjsHZ">here</a>! </p>
 </div>
 <div class="p">
-
+    <h2>Results</h2>
+    <p>We trained the net with the whole training set for 20 epochs and calculate the test accuracy using test set for each
+        epoch. We finally plotted three plots: training loss, test loss and test accuracy. The plots are shown below: </p>
+    <img src="trainLoss.png" class="res">
+    <img src="testLoss.png" class="res">
+    <img src="testAccuracy.png" class="res">
+    <p>We could achieve about 70% test accuracy. Since we have got a relatively good test accuracy, we think our approach
+    was correct. Since we already have the technique to classify images, it makes sense to convert sound files to images
+    first, then use what we already know to do the classification. We used a CNN net similar to CifarNet in hw1 since the
+     CifarNet also performs image classification, and for this project, we also wanted to do (converted) image classification,
+    so we think our approach to using a similar neural network was correct.</p>
+    <p>We didn't do ablation studies or use different methods, since our initial try to using CNN net worked pretty well.
+    By comparing to the results in <a href="http://www.dei.unipd.it/~ferro/CLEF-WN-Drafts/CLEF2019/paper_68.pdf">this research paper</a>
+    , we think we got a better performance than that in this paper. But this doesn't mean that our neural network is better
+    than those used in this paper, because we used different dataset. Our dataset only has 21 classes and each recording
+    is "clear" without any noise (city noise or other birds). From this paper, we can see that Inception model is better than
+    ResNet18 and ResNet34 no matter we used cmAP or rmAP scores. </p>
 </div>
 <div class="p">
-
+    <h2>Discussion</h2>
+    <p>Currently with our clean and well preprocessed data, our neural network performs well and can achieve a high test accuracy.
+    However, if the data becomes more noisy with much background noise, or each recording is not just a single bird singing (multiple
+    birds sing at the same time), or with more classes of birds, we think our model may have a drop in performance and test accuracy.
+    Currently, our approach does not contain parts that handle noise, and we can just classify one kind of bird for each recording.
+    Thus, there are some limitations in our current approach, and we think we can improve our approach to handle those problems, so
+    that our approach can generalize to various dataset. By the way, it took much longer time than we expected to train
+    the neural net, and preprocessing the data.</p>
+    <p>We learned how to transform a problem we have never seen and learned about to a problem that we have learned how to
+    handle. We haven't learned how to classify voice, but we have learned how to classify images. Thus, we can first convert sounds
+    to images and apply what we know. We learned how to convert voice to images, adapt neural nets that we already have and
+    are known to perform well to other problems. We also learned how to research for helpful resources online and compare
+    our results to those discussed in those papers.</p>
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

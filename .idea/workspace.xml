@@ -2,9 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cb58769-0686-4621-829d-404cef45e08a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/birdBackground.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/birdBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/net.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Alaudaarvensis.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Cardueliscarduelis.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Chlorischloris.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Columbapalumbus.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Emberizacitrinella.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Erithacusrubecula.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Fringillacoelebs.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Garrulusglandarius.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Luscinialuscinia.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Parusmajor.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Passerdomesticus.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Passermontanus.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Phoenicurusochruros.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Phoenicurusphoenicurus.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Phylloscopuscollybita.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Phylloscopustrochilus.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Sittaeuropaea.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Sturnusvulgaris.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Troglodytestroglodytes.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Turdusmerula.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recordings/Turdusphilomelos.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Alaudaarvensis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Cardueliscarduelis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Chlorischloris.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Columbapalumbus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Emberizacitrinella.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Erithacusrubecula.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Fringillacoelebs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Garrulusglandarius.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Luscinialuscinia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Parusmajor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Passerdomesticus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Passermontanus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Phoenicurusochruros.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Phoenicurusphoenicurus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Phylloscopuscollybita.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Phylloscopustrochilus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Sittaeuropaea.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Sturnusvulgaris.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Troglodytestroglodytes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Turdusmerula.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spectrogram/Turdusphilomelos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testAccuracy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testLoss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainLoss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,10 +67,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="89" selection-start-line="13" selection-start-column="89" selection-end-line="13" selection-end-column="89" />
+            <state relative-caret-position="501">
+              <caret line="162" column="51" selection-start-line="162" selection-start-column="51" selection-end-line="162" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="591">
+              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -60,22 +107,14 @@
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/Bird-Sound-Classification.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
-    <option name="y" value="47" />
+    <option name="x" value="12" />
+    <option name="y" value="23" />
     <option name="width" value="1423" />
     <option name="height" value="797" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -98,6 +137,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -108,6 +149,8 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/spectrogram" />
+      <recent name="$PROJECT_DIR$/recordings" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -140,15 +183,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607900018947</updated>
-      <workItem from="1607900020280" duration="2964000" />
+      <workItem from="1607900020280" duration="17633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2964000" />
+    <option name="totallyTimeSpent" value="17633000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="284" width="1423" height="797" extended-state="0" />
+    <frame x="12" y="23" width="1423" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -163,8 +206,10 @@
       <window_info anchor="bottom" id="CheckStyle" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" />
+      <window_info anchor="bottom" id="JProfiler" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="MyBatis Log" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -189,19 +234,33 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pictures/Passerdomesticus.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testAccuracy.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testLoss.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainLoss.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="591">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="89" selection-start-line="13" selection-start-column="89" selection-end-line="13" selection-end-column="89" />
+        <state relative-caret-position="501">
+          <caret line="162" column="51" selection-start-line="162" selection-start-column="51" selection-end-line="162" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
